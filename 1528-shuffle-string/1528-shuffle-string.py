@@ -7,5 +7,5 @@ class Solution:
             resList[i] = s[sIter]
             sIter += 1
             
-        return "".join(resList)
+        return ''.join(resList)
         
