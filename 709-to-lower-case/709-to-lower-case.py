@@ -3,8 +3,9 @@ class Solution:
         res = []
         
         for c in s:
-            if ord(c) >= 65 and ord(c) <= 90:
-                res.append(chr(ord(c) + 32))
+            cOrd = ord(c)
+            if cOrd >= 65 and cOrd <= 90:
+                res.append(chr(cOrd + 32))
             else:
                 res.append(c)
                 
