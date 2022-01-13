@@ -1,9 +1,11 @@
 class Solution:
     def toLowerCase(self, s: str) -> str:
-        charList = list(s)
+        res = []
         
-        for i in range(len(charList)):
-            if ord(charList[i]) >= 65 and ord(charList[i]) <= 90:
-                charList[i] = chr(ord(charList[i]) + 32)
+        for c in s:
+            if ord(c) >= 65 and ord(c) <= 90:
+                res.append(chr(ord(c) + 32))
+            else:
+                res.append(c)
                 
-        return ''.join(charList)
+        return ''.join(res)
