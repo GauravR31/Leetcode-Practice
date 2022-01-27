@@ -12,6 +12,7 @@ class Solution:
         curr = head
         
         n = 1
+        
         while curr.next:
             curr = curr.next
             n += 1
@@ -23,10 +24,12 @@ class Solution:
             curr = curr.next
             i += 1
             
-        twin_sums = []
+        max_sum = -999
 
         while curr:
-            twin_sums.append(curr.val + stack.pop())
+            twin_sum = curr.val + stack.pop()
+            if twin_sum > max_sum:
+                max_sum = twin_sum
             curr = curr.next
             
-        return max(twin_sums)
+        return max_sum
