@@ -4,11 +4,6 @@ class Solution:
         r = len(nums) - 1
         
         while l <= r and r < len(nums):
-            if nums[l] == target:
-                return l
-            if nums[r] == target:
-                return r
-            
             m = (l + r)//2
             
             if nums[m] == target:
